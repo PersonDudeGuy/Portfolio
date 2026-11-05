@@ -209,7 +209,7 @@ function main(){
     requestAnimationFrame(main);
 }
 
-setInterval(() => {
+/*setInterval(() => {
     currentLockText += 1;
     if(currentLockText >= lockTexts.length)
     {
@@ -217,7 +217,7 @@ setInterval(() => {
     }
     
     createSpinText(lockTexts[currentLockText]);
-}, 2400);
+}, 2400);*/
 
 setTimeout(lockText, 0)
 function lockText()
@@ -246,9 +246,13 @@ function lockText()
             }
             if(randomTextCount == 40)
             {
-                currentLockText = 0;
-                
-                createSpinText(lockTexts[currentLockText]);
+                randomTextCount = 0;
+                currentLockText += 1;
+                if(currentLockText >= lockTexts.length)
+                {
+                    currentLockText = 0;
+                }
+                createSpinText("x".repeat(lockTexts[currentLockText].length));
 
             }
         }
