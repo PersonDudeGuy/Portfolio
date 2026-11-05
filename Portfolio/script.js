@@ -209,7 +209,7 @@ function main(){
     requestAnimationFrame(main);
 }
 
-/*setInterval(() => {
+setInterval(() => {
     currentLockText += 1;
     if(currentLockText >= lockTexts.length)
     {
@@ -217,7 +217,7 @@ function main(){
     }
     
     createSpinText(lockTexts[currentLockText]);
-}, 2400);*/
+}, 2400);
 
 setTimeout(lockText, 0)
 function lockText()
