@@ -15,6 +15,8 @@ let dotYs = [];
 let connectedDots = [];
 let tick = 0;
 let total = 0;
+let baseMouseX = 0;
+let baseMouseY = 0;
 const alphabet = "abcdefghijklmnopqrstuvwxyz!@#$%^&*";
 let jokes = ["What do you call a french jit?", "le-jit!", "What do french coders use?", 
     "le-git!", "hahahaha", "guess what?", "chicken butt!", "what happens when a jit gets nervous?", "it gets the jitters!"]
