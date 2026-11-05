@@ -80,7 +80,7 @@ function shineStars()
     }
 
     (document.querySelectorAll(".dot")).forEach((item) => { 
-        item.style.boxShadow = "0px 0px 10px " + (300 - Math.hypot(mouseX - item.getBoundingClientRect().x, mouseY - (item.getBoundingClientRect().y + window.scrollY)))/30 + "px white";
+        item.style.boxShadow = "0px 0px 10px " + (300 - Math.hypot(mouseX - item.getBoundingClientRect().x, baseMouseY - (item.getBoundingClientRect().y)))/30 + "px white";
     });
 }
 function isMobileUserAgent() {
@@ -95,7 +95,13 @@ else
     console.log("PC user")
 }
 
+window.addEventListener('scroll', (event) => {
+    mouseY = baseMouseY + window.scrollY;
+});
+
 window.addEventListener('mousemove', (event) => {
+    baseMouseX = event.clientX;
+    baseMouseY = event.clientY;
     mouseX = event.clientX + window.scrollX;
     mouseY = event.clientY + window.scrollY;
 });
