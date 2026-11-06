@@ -205,7 +205,14 @@ function main(){
     }
     shineStars();
     rainbow();
-
+    if(document.getElementById("John").innerHTML !== "John")
+    {
+        window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+    }
+    if(document.getElementById("introText").innerHTML !== "I'm a very cool person")
+    {
+        window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+    }
     requestAnimationFrame(main);
 }
 
